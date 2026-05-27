@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.main {
+    background-image: url(assets/images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.main .box {
+    min-height: 100vh;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 40px;
+    height: 90px;
+}
+
+nav img {
+    color: red;
+    width: 160px;
+    position: relative;
+    z-index: 10;
+
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+nav div {
+    display: flex;
+    gap: 15px;
+}
+
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+    min-height: calc(100vh - 92px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding: 0 30px;
+    font-weight: 400;
+}
+
+
+.hero> :nth-child(1) {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+.separation {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+    z-index: 20;
+}
+
+.btn {
+    padding: 3px 10px;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(248, 243, 243, 0.021);
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+}
+
+.language-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.language-btn svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.main input {
+    padding: 7px 101px 8px 14px;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* .trending-section */
+
+.trending-section {
+    padding: 50px 150px;
+}
+
+.trending-section h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card {
+    position: relative;
+    width: 180px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card span {
+    position: absolute;
+    left: -1px;
+    bottom: 10px;
+    font-size: 100px;
+    font-weight: 900;
+    color: black;
+    -webkit-text-stroke: 2px white;
+}
+
+/* Reasons-section */
+
+.reasons-section {
+    padding: 20px 150px 60px;
+}
+
+.reasons-section h3 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.reason-card {
+    position: relative;
+    min-height: 250px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    background: linear-gradient(149deg,
+            #192247 0%,
+            #210e17 99%);
+}
+
+.reason-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.reason-card p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.icon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 40px;
+    color: #ff5f9e;
+    display: flex;
+}
+
+.icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* faq section */
+.faq {
+    background: black;
+    color: white;
+    padding: 20px 150px 60px;
+}
+
+.faq h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.faqbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d2d2d;
+    padding: 28px 30px;
+    margin-bottom: 8px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+}
+
+.faqbox svg {
+    filter: invert(1);
+}
+
+
+.footer {
+    padding: 70px 150px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    background: black;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.questions {
+    margin-bottom: 40px;
+
+    font-size: 16px;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.footer-item a {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 14px;
+}
+
+.footer-btn {
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    padding: 8px 18px;
+
+    border-radius: 4px;
+
+    margin-bottom: 35px;
+
+    cursor: pointer;
+}
+
+.footer-country {
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* LARGE LAPTOPS */
+@media(max-width:1200px) {
+
+    nav {
+        padding: 20px 30px;
+    }
+
+    .trending-section,
+    .reasons-section,
+    .faq,
+    .footer {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .reasons-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* TABLETS */
+@media(max-width:900px) {
+
+    .hero> :nth-child(1) {
+        font-size: 40px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 22px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .faqbox {
+        font-size: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+
+    nav {
+        padding: 15px 20px;
+        height: 70px;
+    }
+
+    nav img {
+        width: 110px;
+    }
+
+    .hero {
+        gap: 18px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main input {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .btn-red {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .trending-section,
+    .reasons-section,
+    .faq,
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .reasons-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 140px;
+    }
+
+    .card span {
+        font-size: 70px;
+    }
+
+    .faqbox {
+        font-size: 18px;
+        padding: 22px 20px;
+    }
+
+}
